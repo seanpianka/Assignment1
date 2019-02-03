@@ -1,0 +1,71 @@
+a)
+
+sean@DESKTOP-K4CFJE0:~/Assignment1$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   docs/status.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sean@DESKTOP-K4CFJE0:~/Assignment1$ git add . && git commit && git push
+[master 60cfee5] Updated information (status) files
+ 1 file changed, 5 insertions(+)
+Username for 'https://github.com': seanpianka
+Password for 'https://seanpianka@github.com':
+Counting objects: 7, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 888 bytes | 888.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/seanpianka/Assignment1.git
+   3d373c9..60cfee5  master -> master
+
+b) git rev-list --count master, 5 commits
+
+sean@DESKTOP-K4CFJE0:~/Assignment1$ git rev-list --count master
+5
+
+c) Thu Jan 10 16:45:38 2019 -0500
+
+git log .gitignore
+
+d) 
+    1. Allows for a "master" branch which contains stable versions of the software and at least
+       one development branch where new and unstable changes can be made.
+    2. For features, known as "feature branches", which allow new features to be developed from
+       branches forked off from branches containing a stable version, and then merged into the
+       master branch once they're tested to be working.
+
+e) `git status` will show the current state of the repository (files modified but not staged, files
+   staged and ready for a commit, files added, deleted, or modified) all with respective to HEAD
+   
+   `git log` will show the history of commits to the repository, not any uncommited changes that
+   may be waiting to be staged or commited.
+
+f) `git log -p` works well to see the changes to the file from each commit.
+
+Also, `git log --follow <filename>` works well for following the file if it was renamed at all
+during the development process.
+
+g) `git log --grep "file"`
+
+h) Definitions:
+
+Inheritance: state and behavior of a parent class is reflected in child classes
+Polymorphism: objects of a class can be used as if they were objects of another class
+Encapsulaton: hiding or wrapping the details of an object or system within a class
+
+i) The main difference is whether there is a single repository (integration manager) or multiple 
+repositories (lieutenants managing some developers commits) which manages, merges, and resolves 
+conflicts in commits from developers. 
+
+j) It lets the dictator delegate work and collect many commits of code at different points from 
+various developers before integrating them.
+
