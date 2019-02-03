@@ -69,3 +69,12 @@ conflicts in commits from developers.
 j) It lets the dictator delegate work and collect many commits of code at different points from 
 various developers before integrating them.
 
+k) Yes, polymorphism is used when the virtual method `hit()` is used. The caller does not
+need to be aware of the subclass of the `Weapon` class being used since each of the children
+will have the virtual method `hit()` defined. 
+
+Yes, encapsulation is used in many places, such as the `hit()` methods which encapsulate
+the logic for how a specific weapon interacts with a certain value of armor. In addition,
+each class separately maintains its own value of hitPoints. In addition, the singleton
+used for the factory and the ways in which initialization of new weapons is entirely
+handled by the factory is an example of encapsulation.
